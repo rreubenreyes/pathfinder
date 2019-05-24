@@ -1,0 +1,28 @@
+{
+  "name": "pathfinder",
+  "version": "1.0.0",
+  "description": "Intuitive key input methods for the browser",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rreubenreyes/pathfinder.git"
+  },
+  "author": "Reuben Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rreubenreyes/pathfinder/issues"
+  },
+  "homepage": "https://github.com/rreubenreyes/pathfinder#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0"
+  }
+}
