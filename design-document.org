@@ -1,0 +1,70 @@
+* /The Overview/ - What is this? 
+"Pathfinder" (working name) is a JavaScript library which aims to provide keyboard layering as a rich, fully-featured input system for the modern browser.
+
+* /The Problem/ - Why should I care?
+** A short history
+Over the past few decades, our methods of interfacing with our devices have been trending towards rich and intuitive input systems. Classic examples include Apple's innovation on the computer mouse, as well as ANSI/ISO keyboard layouts. We've seen these forms of human-computer interfaces evolve in the form of the scroll wheel, the stylus and tablet, the touch screen and on-screen keyboard, text-to-speech, inertial scrolling, haptic feedback... just to name a few examples.
+
+One of the key innovators and long-standing market leaders in this space has always been Apple. They, mostly under Jobs' guidance as a product and design owner, have led the computer industry down this path. Jobs' extreme focus on providing a "perfect" user experience for his products lent itself very well to Apple's input interfaces--many of the features and devices mentioned in the first paragraph are from Apple.
+
+** Skeuomorphism 
+The key pattern to notice with Jobs is his tendency to focus on simplifying his designs *skeuomorphically*. Apple still maintains such a strong grip over the input interface niche today, and the trend towards skeuomorphism in input remains. What are some examples of this? 
+
+- Trackpad gestures :: Pinch and zoom? Folding and unfolding paper. 
+- Natural scrolling :: To scroll /down/, you swipe /up/. This is like reading a paper on your desk while keeping your eyes fixated on the same spot--to read /down/ the page, you slide the paper /up/.
+- Inertial scrolling :: Literally any interaction involving spinning a round object with your hands.
+- Haptic feedback :: Mimics the feel of an actual physical switch underneath your fingers.
+     
+The above are among many industry standard forms of device input. They are very successful because they are intuitive to the user--all of the examples named above are skeuomorphic, in that they are parallels of physical actions which any given user has practiced millions of times over their lives. *Skeuomorphism, in this manifestation, is extremely intuitive*.
+
+** Spatial and signal input
+You will notice that all of the examples named above are forms of *spatial input*. This means that the sole intention of these input methods are to move something virtual around on a physical screen, and they are intuitive because they are direct parallels to physical actions which produce the same effects with real-world objects.
+
+You will also notice that the /keyboard/ is nowhere on that list!
+
+The keyboard is a form of *signal* input. We /cannot/ apply skeuomorphism in the same way as with spatial input, simply because there is no physical parallel for putting words on a screen, save for using a typewriter, which is more or less the same thing as using a keyboard to begin with.
+
+(Another form of signal input is the screen and tablet, which allows for writing as a form of signal /and/ spatial input. Writing is its own skeuomorphic parallel, and it leans heavily on the "spatial" side of the signal/spatial spectrum.)
+
+Therefore, while we do have a very efficient method of signal input through the keyboard, and learning how to use one makes humans very efficient at providing that input, making the use of one /truly/ intuitive, as the industry has done with the touch screen, is a very difficult, almost impossible task. *Using a keyboard is a learned skill by design*, and so it cannot be truly intuitive.
+
+** Interacting with application software
+Today, it's very easy to translate the skeuomorphism of a spatial input device--the touch screen--into intuitive interactions with a piece of software. The same cannot be said for a keyboard. 
+
+Apps take huge advantage of the fact that using a touch screen is intuitive--exhibit A being that /freaking everything has gesture support/. Thus, users are able to command complex functions by pure intuition and reflex.
+
+We also try to apply the same concept to using a keyboard, mostly through the use of keyboard shortcuts and sequences. While this is a good way to reduce friction in user input towards an app--=Ctrl+*C*= means =*C*opy=, it can never be truly intuitive--there is no parallel to physical action, and every interaction is based on memory.
+
+** So, what /is/ the problem? 
+If we continue adhering to a skeuomorphic approach, *we cannot solve the problem of making pure signal input a truly intuitive device input interface*. 
+
+* /The Product/ - How does this solve the problem?
+** What should we do differently?
+For a human to be efficient at signal input, they must memorize many key combinations and sequences. These are often assigned /non/-intuitively, in the form of many modifier keypresses plus one alphanumeric... etc. The main system that we use to ease this process is *mnemonic*. That is, =Ctrl+C= means =Copy=.
+
+_The cycle of learning software functions mnemonically:_
+
+1. Recognize a logical parallel: =Ctrl+C= means =Copy=.
+2. Eventually memorize this.
+3. Repeat.
+   
+(Stop here, it's late. Temporary summary follows below.)
+
+_The cycle of learning software functions organically:_
+
+1. Recognize that you want to do something: Copy something to your clipboard.
+2. Literally express this thought--somehow, type in ="Copy"= to a receiving command interface.
+3. Be shown a matching function (The name of the function), /as well as/ a corresponding shortcut sequence.
+4. Eventually memorize this shortcut.
+5. Eventually start using the shortcut rather than typing ="Copy"= all the time.
+ 
+_The cycle of learning software functions organically and by discovery_: 
+1. Perform the shortcut (ideally a key sequence) for a function you already know.
+2. As you perform the key sequence, and as long as you have not finished, be shown a list of functions which are /related/ to the incomplete key sequence you are in the middle of inputting.
+3. Discover and start using these related functions organically, in the same way as described above.
+
+* /The Audience/ - Who needs this?
+
+* /The Experience/ - What does this mean for me?
+
+* /The Application/ - Technical details
