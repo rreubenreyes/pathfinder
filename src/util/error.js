@@ -28,4 +28,6 @@ export default function assert(A, F, B) {
     if (!assertionLookup[F][1](A, B)) {
         throw new AssertionError(`Expected ${A} ${assertionLookup[F][0]} ${B}`);
     }
+
+    return null;
 }
