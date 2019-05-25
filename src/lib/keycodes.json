@@ -1,4 +1,4 @@
-export default {
+{
   "UNKNOWN": "\"Unidentified\"",
   "ALT": "\"Alt\"",
   "ALT_GR": "\"AltGraph\"",
