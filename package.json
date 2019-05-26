@@ -20,7 +20,9 @@
     "url": "https://github.com/rreubenreyes/pathfinder/issues"
   },
   "homepage": "https://github.com/rreubenreyes/pathfinder#readme",
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "jest": "^24.8.0"
