@@ -19,22 +19,24 @@ export default class Layer {
      * Update this layer's input tree.
      */
     update(binding, routine) {
-        const head = this.map.get(binding.keySequence[0]);
-        const seq = binding.keySequence.slice(1);
+        let cursor = this.map;
 
-        let cursor = head;
-        binding.keySequence.slice(1).forEach(leaf => {
-            if (!cursor.next) {
+        binding.keySequence.forEach(stroke => {
+            /* If the following stroke does not have a registered map, register it */
+            if (!cursor[stroke]) {
                 cursor.next = new Map();
             }
 
+            /* Make sure the next stroke is a map. If it is a function, then that binding
+             * is already occupied. Support binding overwriting later. */
             assert(cursor, 'IS', Map, () => {
-                cursor = cursor.next;
+                cursor = cursor[stroke];
             })
         });
 
+        /* As long as the current branch is empty, assign it to the passed routine */
         assert(cursor, 'EQ', undefined, () => {
-            cursor.next = routine;
+            cursor = routine;
         })
     }
 
