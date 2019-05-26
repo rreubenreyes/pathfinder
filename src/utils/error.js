@@ -24,7 +24,14 @@ class AssertionError extends Error {
     }
 }
 
-export default function assert(A, F, B) {
+export default function assert(A, F, B, fn = null) {
+    if (F === 'CUSTOM') {
+        if (!(typeof fn === 'function') || !fn(A, B)) {
+            throw new AssertionError(`Failed user-defined assertion on ${A} ${B}`);
+        }
+
+        return null;
+    }
     if (!assertionLookup[F][1](A, B)) {
         throw new AssertionError(`Expected ${A} ${assertionLookup[F][0]} ${B}`);
     }
