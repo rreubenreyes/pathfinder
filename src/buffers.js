@@ -2,13 +2,13 @@
  * Most atomic unit for handling more than one keypress.
  */
 class Buffer {
-    constructor(input, opts) {
+    constructor(keySequence, opts) {
         const {
             ordered = true,
             canUndo = false
         } = opts;
 
-        this.keySequence = input;
+        this.keySequence = keySequence;
         this.ordered = ordered;
         this.canUndo = canUndo;
     }
@@ -27,7 +27,7 @@ export class TimedSequence extends Buffer {
 }
 
 export class Combo extends Buffer {
-    constructor(...args) {
+    constructor(delay = 100, ...args) {
         super(...args);
     }
 }
